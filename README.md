@@ -113,8 +113,10 @@ Implementé un flujo integrado en **Google Workspace** con:
    - Consume el dataset y muestra KPIs y tendencias para control de gasto/presupuesto.
 
 ### Diagrama (placeholder)
-- Agrega aquí tu diagrama de arquitectura:
+
+
 ![Arquitectura](./images/arquitectura.png)
+
 
 ---
 
@@ -175,10 +177,6 @@ function procesarCorreosEtiquetados() {
 - **Automatiza captura** de datos desde el correo (sin intervención manual).
 - Centraliza información en Sheets y evidencia en Drive.
 - Reduce el tiempo de “triage” al permitir consultar directamente los links.
-
-> Placeholder para el repositorio (cuando lo publiques):
-- Código Apps Script: `./src/appsscript/procesarCorreosEtiquetados.js`
-- Helpers / utilidades: `./src/appsscript/helpers.js`
 
 ---
 
