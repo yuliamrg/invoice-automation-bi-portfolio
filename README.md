@@ -210,7 +210,7 @@ Looker Studio consume el dataset (Sheets) para construir un tablero con indicado
 - Seguimiento de presupuesto usando el campo `PRESUPUESTO`.
 
 ### Capturas / evidencias (placeholders)
-- `![Dashboard - Facturación](./images/dashboard_facturacion.png)`
+- ![Dashboard - Facturación](./images/dashboard_facturacion.png)
 - - Link demo / descripción: **[Link](https://lookerstudio.google.com/reporting/b96d1334-b932-47f7-83b2-6f0fc7cb2a99)**
 
 ---
@@ -261,7 +261,7 @@ Cambios logrados:
 
 - 🔗 Dashboard publicado: **[Link](https://lookerstudio.google.com/reporting/b96d1334-b932-47f7-83b2-6f0fc7cb2a99)**
 - 🔗 App (AppSheet): **[Link](https://www.appsheet.com/start/e30903ad-d255-41e1-9dc9-bec9de2abe35)**
-- 🧾 Ejemplo de registro en Sheets: **[Link / Imagen](https://docs.google.com/spreadsheets/d/1TnYdPbpynwZEYBTBFleRRgsscZLUhQjfj3x9g8RdQ-I/edit?usp=sharing)**
+- 🧾 Ejemplo de registro en Sheets: **[Link](https://docs.google.com/spreadsheets/d/1TnYdPbpynwZEYBTBFleRRgsscZLUhQjfj3x9g8RdQ-I/edit?usp=sharing)**
 
 ---
 
