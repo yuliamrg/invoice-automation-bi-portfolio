@@ -5,20 +5,30 @@
 ---
 
 ## Contenido
-- [Contexto](#contexto)
-- [Problema](#problema)
-- [Objetivos](#objetivos)
-- [Solución](#solución)
-- [Arquitectura y flujo de datos](#arquitectura-y-flujo-de-datos)
-- [Modelo de datos](#modelo-de-datos)
-- [Implementación con Apps Script](#implementación-con-apps-script)
-- [Capa operativa con AppSheet](#capa-operativa-con-appsheet)
-- [BI con Looker Studio](#bi-con-looker-studio)
-- [Impacto](#impacto)
-- [Skills aplicados](#skills-aplicados)
-- [Evidencias](#evidencias)
-- [Estructura sugerida del repositorio](#estructura-sugerida-del-repositorio)
-- [Próximos pasos](#próximos-pasos)
+- [Automatización de gestión de facturas (AppSheet + Apps Script + Looker Studio)](#automatización-de-gestión-de-facturas-appsheet--apps-script--looker-studio)
+  - [Contenido](#contenido)
+  - [Contexto](#contexto)
+  - [Problema](#problema)
+  - [Objetivos](#objetivos)
+  - [Solución](#solución)
+  - [Arquitectura y flujo de datos](#arquitectura-y-flujo-de-datos)
+    - [Flujo end-to-end](#flujo-end-to-end)
+    - [Diagrama (placeholder)](#diagrama-placeholder)
+  - [Modelo de datos](#modelo-de-datos)
+    - [Dataset principal: Google Sheets](#dataset-principal-google-sheets)
+  - [Implementación con Apps Script](#implementación-con-apps-script)
+    - [Enfoque técnico aplicado](#enfoque-técnico-aplicado)
+    - [Fragmento representativo (función principal)](#fragmento-representativo-función-principal)
+    - [Qué resuelve este módulo](#qué-resuelve-este-módulo)
+  - [Capa operativa con AppSheet](#capa-operativa-con-appsheet)
+    - [Capturas / evidencias (placeholders)](#capturas--evidencias-placeholders)
+  - [BI con Looker Studio](#bi-con-looker-studio)
+    - [Capturas / evidencias (placeholders)](#capturas--evidencias-placeholders-1)
+  - [Impacto](#impacto)
+    - [Métricas (completa con datos reales)](#métricas-completa-con-datos-reales)
+  - [Skills aplicados](#skills-aplicados)
+  - [Evidencias](#evidencias)
+  - [Estructura del repositorio](#estructura-del-repositorio)
 
 ---
 
@@ -104,7 +114,7 @@ Implementé un flujo integrado en **Google Workspace** con:
 
 ### Diagrama (placeholder)
 - Agrega aquí tu diagrama de arquitectura:
-  - `![Arquitectura](./images/arquitectura.png)`
+![Arquitectura](./images/arquitectura.png)
 
 ---
 
@@ -123,8 +133,6 @@ CUFE	FECHA REGISTRO	TIPO	FECHA FACTURA	NIT	PROVEEDOR	NO FACTURA	VALOR	LINK FACTU
 - **LINK FACTURA** y **URL CORREO**: trazabilidad inmediata (soporte + origen).
 - **ANIO/MES/DIA**: soporte analítico temporal en Looker Studio.
 - **ESTADO FACTURA**, **CONFIRMADA**, **CORREO ENVIADO**: control del proceso y auditoría.
-
-> (Opcional) Puedes crear un diccionario de datos en `docs/diccionario_datos.md`.
 
 ---
 
@@ -185,9 +193,9 @@ AppSheet se usa como la **interfaz** para operar el proceso:
 - Bot para automatizar la respuesta del correo según la acción seleccionada.
 
 ### Capturas / evidencias (placeholders)
-- `![AppSheet - Lista](./images/appsheet_lista.png)`
-- `![AppSheet - Detalle](./images/appsheet_detalle.png)`
-- Link demo / descripción: **[Agregar enlace aquí](#)**
+![AppSheet - Lista](./images/appsheet_lista.png)
+![AppSheet - Detalle](./images/appsheet_detalle.png)
+- Link demo / descripción: **[Link](https://www.appsheet.com/start/e30903ad-d255-41e1-9dc9-bec9de2abe35)**
 
 ---
 
@@ -205,7 +213,7 @@ Looker Studio consume el dataset (Sheets) para construir un tablero con indicado
 
 ### Capturas / evidencias (placeholders)
 - `![Dashboard - Facturación](./images/dashboard_facturacion.png)`
-- Link público (si aplica): **[Agregar enlace aquí](#)**
+- - Link demo / descripción: **[Link](https://lookerstudio.google.com/reporting/b96d1334-b932-47f7-83b2-6f0fc7cb2a99)**
 
 ---
 
@@ -219,16 +227,14 @@ Cambios logrados:
 - Menor dependencia de copias impresas gracias a evidencia digital.
 
 ### Métricas (completa con datos reales)
-- Tiempo promedio por factura **antes**: `__` min
-- Tiempo promedio por factura **después**: `__` min
-- Ahorro estimado semanal/mensual: `__` horas
-- % facturas con trazabilidad completa (correo + pdf + registro): `__%`
+- Tiempo promedio por factura **antes**: `90` min
+- Tiempo promedio por factura **después**: `25` min
+- Ahorro estimado semanal/mensual: `60` horas
+- % facturas con trazabilidad completa (correo + pdf + registro): `100%`
 
 ---
 
 ## Skills aplicados
-
-*(Solo habilidades evidentes en el alcance descrito y el código compartido)*
 
 - **Google Apps Script (automatización)**
   - `GmailApp` (búsqueda/lectura de hilos por etiqueta)
@@ -255,16 +261,13 @@ Cambios logrados:
 
 ## Evidencias
 
-Agrega aquí lo que quieras mostrar en tu portafolio:
-
-- 📷 Capturas: `./images/...`
-- 🔗 Dashboard publicado: **[Link](#)**
-- 🔗 App (AppSheet): **[Link](#)**
-- 🧾 Ejemplo de registro en Sheets (sin datos sensibles): **[Link / Imagen](#)**
+- 🔗 Dashboard publicado: **[Link](https://lookerstudio.google.com/reporting/b96d1334-b932-47f7-83b2-6f0fc7cb2a99)**
+- 🔗 App (AppSheet): **[Link](https://www.appsheet.com/start/e30903ad-d255-41e1-9dc9-bec9de2abe35)**
+- 🧾 Ejemplo de registro en Sheets: **[Link / Imagen](https://docs.google.com/spreadsheets/d/1TnYdPbpynwZEYBTBFleRRgsscZLUhQjfj3x9g8RdQ-I/edit?usp=sharing)**
 
 ---
 
-## Estructura sugerida del repositorio
+## Estructura del repositorio
 
 ```
 /
@@ -274,17 +277,8 @@ Agrega aquí lo que quieras mostrar en tu portafolio:
 │  ├─ appsheet_lista.png
 │  ├─ appsheet_detalle.png
 │  └─ arquitectura.png
-└─ src/
-   └─ appsscript/
-      ├─ procesarCorreosEtiquetados.js
-      └─ helpers.js
+
 ```
 
 ---
 
-## Próximos pasos
-
-- Crear `docs/diccionario_datos.md` y documentar reglas de negocio.
-- Agregar validaciones adicionales sobre campos obligatorios del XML.
-- Documentar permisos mínimos requeridos en Google Workspace (Gmail/Drive/Sheets).
-- (Si aumentara el volumen) evaluar una capa analítica más robusta manteniendo la operación en AppSheet.
